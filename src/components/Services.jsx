@@ -95,43 +95,28 @@ const Services = () => {
 
     const getCategoryColor = (category) => {
         const colors = {
-            "TAXATION": "bg-[#58a4b0] text-white",
-            "COMPLIANCE": "bg-[#ff6b6b] text-white", 
-            "LITIGATION": "bg-[#51cf66] text-white",
-            "CORPORATE": "bg-[#ffd43b] text-[#2c2c2c]",
-            "COMMERCIAL": "bg-[#845ef7] text-white",
-            "IP & TECH": "bg-[#ff8cc8] text-white",
-            "REGULATORY": "bg-[#20c997] text-white"
+            "TAXATION": "bg-[#d6ccc2] text-[#2c2c2c]",
+            "COMPLIANCE": "bg-[#e9c46a] text-[#2c2c2c]", 
+            "LITIGATION": "bg-[#a8dadc] text-[#2c2c2c]",
+            "CORPORATE": "bg-[#f1faee] text-[#2c2c2c]",
+            "COMMERCIAL": "bg-[#f4a261] text-[#2c2c2c]",
+            "IP & TECH": "bg-[#e76f51] text-white",
+            "REGULATORY": "bg-[#2a9d8f] text-white"
         };
-        return colors[category] || "bg-gray-500 text-white";
+        return colors[category] || "bg-[#d6ccc2] text-[#2c2c2c]";
     };
 
     return (
-        <section className="min-h-screen bg-gradient-to-br from-[#e9edc9] to-[#d6ccc2] relative overflow-hidden py-20">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="text-[200px] font-bold text-[#2c2c2c] absolute top-10 left-10 transform -rotate-12">
-                    Recently
-                </div>
-                <div className="text-[150px] font-bold text-[#2c2c2c] absolute bottom-20 right-10 transform rotate-12">
-                    Published
-                </div>
-            </div>
-
+        <section className="min-h-screen bg-gradient-to-br from-[#f1faee] to-[#d6ccc2] relative overflow-hidden py-20">
             <div className="max-w-7xl mx-auto px-8 relative z-10">
                 {/* Section Header */}
-                <div className="mb-16">
-                    <h2 className="text-6xl font-bold text-[#2c2c2c] mb-4">
+                <div className="mb-20 text-center">
+                    <h2 className="text-5xl font-semibold text-[#2c2c2c] mb-6 tracking-tight">
                         Our Services
                     </h2>
-                    <p className="text-xl text-[#666] max-w-2xl">
-                        Comprehensive legal solutions across multiple practice areas
+                    <p className="text-xl text-[#666] max-w-3xl mx-auto leading-relaxed font-normal">
+                        Comprehensive legal solutions across multiple practice areas with dedication and expertise
                     </p>
-                    <div className="mt-4">
-                        <span className="text-[#58a4b0] font-semibold text-lg cursor-pointer hover:underline">
-                            MORE SERVICES →
-                        </span>
-                    </div>
                 </div>
 
                 {/* Services Grid */}
@@ -139,29 +124,33 @@ const Services = () => {
                     {services.map((service, index) => (
                         <div 
                             key={index}
-                            className="bg-white/70 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/80 transition-all duration-300 hover:scale-105 shadow-lg"
+                            className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-white/30 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                         >
                             {/* Category Tag */}
-                            <div className={`inline-block px-3 py-1 rounded-md text-sm font-semibold mb-4 ${getCategoryColor(service.category)}`}>
+                            <div className={`inline-block px-4 py-2 rounded-lg text-sm font-medium mb-6 ${getCategoryColor(service.category)}`}>
                                 {service.category}
                             </div>
 
                             {/* Service Title */}
-                            <h3 className="text-xl font-semibold text-[#2c2c2c] mb-4 leading-tight">
+                            <h3 className="text-2xl font-semibold text-[#2c2c2c] mb-6 leading-tight tracking-tight">
                                 {service.name}
                             </h3>
 
                             {/* Service Details */}
-                            <div className="space-y-2">
+                            <div className="space-y-3">
                                 {service.details.map((detail, detailIndex) => (
-                                    <p key={detailIndex} className="text-[#666] text-sm leading-relaxed">
-                                        • {detail}
+                                    <p key={detailIndex} className="text-[#666] text-sm leading-relaxed font-normal flex items-start">
+                                        <span className="text-[#d6ccc2] mr-3 mt-1 text-lg">•</span>
+                                        <span>{detail}</span>
                                     </p>
                                 ))}
                             </div>
                         </div>
                     ))}
                 </div>
+
+                {/* Call to Action */}
+               
             </div>
         </section>
     );
