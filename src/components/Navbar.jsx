@@ -1,7 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [displayText, setDisplayText] = useState('ALA');
+    const [isAnimating, setIsAnimating] = useState(true);
+
+    useEffect(() => {
+        // Start animation after initial load
+        const timer = setTimeout(() => {
+            const targetText = ' | ALKA LAW ASSOCIATES';
+            let currentIndex = 0;
+            
+            const typeInterval = setInterval(() => {
+                if (currentIndex < targetText.length) {
+                    setDisplayText('ALA' + targetText.slice(0, currentIndex + 1));
+                    currentIndex++;
+                } else {
+                    clearInterval(typeInterval);
+                    setIsAnimating(false);
+                }
+            }, 100); // 100ms delay between each character
+
+            return () => clearInterval(typeInterval);
+        }, 1500); // Wait 1.5 seconds before starting the typewriter effect
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -26,9 +50,15 @@ const Navbar = () => {
                 {/* Logo/Brand */}
                 <div className="flex items-center">
                     <h1 className="text-2xl font-bold text-[#2c2c2c] tracking-tight cursor-pointer" onClick={(e) => handleNavClick(e, 'home')}>
-                        ALA 
-                        <span className="text-gray-400 hidden min-[760px]:inline">|</span>
-                        <span className="font-semibold ml-2 hidden min-[760px]:inline">ALKA LAW ASSOCIATES</span>
+                        {/* Desktop version with full animation */}
+                        <span className="hidden min-[760px]:inline">
+                            {displayText}
+                            {isAnimating && <span className="animate-pulse-cursor">|</span>}
+                        </span>
+                        {/* Mobile version - just ALA */}
+                        <span className="min-[760px]:hidden">
+                            ALA
+                        </span>
                     </h1>
                 </div>
 

@@ -110,11 +110,11 @@ const Services = ({ id }) => {
         <section id={id} className="min-h-screen bg-gradient-to-br from-[#f1faee] to-[#d6ccc2] relative overflow-hidden py-20">
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 {/* Section Header */}
-                <div className="mb-20 text-center">
-                    <h2 className="text-5xl font-semibold text-[#2c2c2c] mb-6 tracking-tight">
+                <div className="mb-20 text-center animate-fade-in-up">
+                    <h2 className="text-5xl font-semibold text-[#2c2c2c] mb-6 tracking-tight animate-slide-in-down">
                         Our Services
                     </h2>
-                    <p className="text-xl  text-[#666] max-w-5xl mx-auto p-6 font-normal pl-20 text-center">
+                    <p className="text-xl text-[#666] max-w-5xl mx-auto p-6 font-normal pl-20 text-center animate-fade-in animation-delay-300">
                         Comprehensive legal solutions across multiple practice areas with dedication and expertise
                     </p>
                 </div>
@@ -124,23 +124,24 @@ const Services = ({ id }) => {
                     {services.map((service, index) => (
                         <div 
                             key={index}
-                            className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-white/30 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                            className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-white/30 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl animate-fade-in-up group"
+                            style={{ animationDelay: `${index * 100}ms` }}
                         >
                             {/* Category Tag */}
-                            <div className={`inline-block px-4 py-2 rounded-lg text-sm font-medium mb-6 ${getCategoryColor(service.category)}`}>
+                            <div className={`inline-block px-4 py-2 rounded-lg text-sm font-medium mb-6 transition-transform duration-300 group-hover:scale-105 ${getCategoryColor(service.category)}`}>
                                 {service.category}
                             </div>
 
                             {/* Service Title */}
-                            <h3 className="text-2xl font-semibold text-[#2c2c2c] mb-6 leading-tight tracking-tight">
+                            <h3 className="text-2xl font-semibold text-[#2c2c2c] mb-6 leading-tight tracking-tight transition-colors duration-300 group-hover:text-[#1a1a1a]">
                                 {service.name}
                             </h3>
 
                             {/* Service Details */}
                             <div className="space-y-3">
                                 {service.details.map((detail, detailIndex) => (
-                                    <p key={detailIndex} className="text-[#666] text-sm leading-relaxed font-normal flex items-start">
-                                        <span className="text-[#d6ccc2] mr-3 mt-1 text-lg">•</span>
+                                    <p key={detailIndex} className="text-[#666] text-sm leading-relaxed font-normal flex items-start transition-colors duration-300 group-hover:text-[#555]">
+                                        <span className="text-[#d6ccc2] mr-3 mt-1 text-lg transition-colors duration-300 group-hover:text-[#2c2c2c]">•</span>
                                         <span>{detail}</span>
                                     </p>
                                 ))}
@@ -148,9 +149,6 @@ const Services = ({ id }) => {
                         </div>
                     ))}
                 </div>
-
-                {/* Call to Action */}
-               
             </div>
         </section>
     );

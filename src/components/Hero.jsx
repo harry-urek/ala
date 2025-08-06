@@ -5,20 +5,22 @@ const Hero = ({ id }) => {
         <section id={id} className="min-h-screen bg-gradient-to-br from-[#d6ccc2] to-[#f5ebe0] relative overflow-hidden">
             <div className="flex max-w-8xl mx-auto px-15 py-40 gap-15 items-start max-[760px]:flex-col max-[760px]:px-4 max-[760px]:py-20 max-[760px]:gap-8">
                 {/* Left Content */}
-                <div className="flex-1 max-w-2xl py-10 pl-11 ml-2 max-[760px]:max-w-full max-[760px]:py-0 max-[760px]:pl-0 max-[760px]:ml-0 max-[760px]:text-center">
+                <div className="flex-1 max-w-2xl py-10 pl-11 ml-2 max-[760px]:max-w-full max-[760px]:py-0 max-[760px]:pl-0 max-[760px]:ml-0 max-[760px]:text-center animate-fade-in-up">
                     {/* Brand Name */}
                     <div className="flex flex-col mb-15 max-[760px]:mb-8">
-                        <span className="text-5xl font-semibold text-[#2c2c2c] leading-tight tracking-tight max-[760px]:text-3xl">ALKA LAW ASSOCIATES </span>
+                        <span className="text-5xl font-semibold text-[#2c2c2c] leading-tight tracking-tight max-[760px]:text-3xl animate-slide-in-left">
+                            ALKA LAW ASSOCIATES 
+                        </span>
                     </div>
 
                     {/* Main Content */}
                     <div className="mb-20 max-[760px]:mb-8">
-                        <h1 className="text-6xl font-normal text-[#2c2c2c] leading-tight mb-6 tracking-tight max-[760px]:text-4xl max-[760px]:mb-4">
+                        <h1 className="text-6xl font-normal text-[#2c2c2c] leading-tight mb-6 tracking-tight max-[760px]:text-4xl max-[760px]:mb-4 animate-slide-in-left animation-delay-200">
                             Your Justice <br />
                             <em className="italic font-light">Our Commitment</em>
                         </h1>
 
-                        <p className="text-lg text-[#666] leading-relaxed pt-4 mb-5 font-normal text-wrap max-[760px]:text-base max-[760px]:pt-2 max-[760px]:mb-4">
+                        <p className="text-lg text-[#666] leading-relaxed pt-4 mb-5 font-normal text-wrap max-[760px]:text-base max-[760px]:pt-2 max-[760px]:mb-4 animate-fade-in animation-delay-400">
                             We're a certified legal firm that provides comprehensive
                             legal services to individuals and businesses across
                             multiple practice areas with dedication and expertise.
@@ -27,19 +29,17 @@ const Hero = ({ id }) => {
                 </div>
 
                 {/* Right Content - Single Large Image */}
-                <div className="flex-1 relative h-[600px] flex justify-end max-[760px]:h-auto max-[760px]:justify-center max-[760px]:flex-none">
+                <div className="flex-1 relative h-[600px] flex justify-end max-[760px]:h-auto max-[760px]:justify-center max-[760px]:flex-none animate-fade-in-right animation-delay-300">
                     <div className="h-[400px] w-[800px] max-[760px]:h-[300px] max-[760px]:w-full max-[760px]:max-w-[400px]">
-                        <div className="w-full h-full rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-[#e8f4fd] to-[#c3e9ff] transition-transform duration-300 hover:-translate-y-1 max-[760px]:rounded-lg">
-                            <img src="/hero.png" alt="Legal consultation" className="w-full h-full object-cover" />
+                        <div className="w-full h-full rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-[#e8f4fd] to-[#c3e9ff] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl max-[760px]:rounded-lg">
+                            <img src="/hero.png" alt="Legal consultation" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                         </div>
                     </div>
 
                     {/* Circular Logo */}
-                    <div className="absolute top-1/2 right-4 transform -translate-y-1/2 w-20 h-20 max-[760px]:hidden">
+                    <div className="absolute top-1/2 right-4 transform -translate-y-1/2 w-20 h-20 max-[760px]:hidden animate-pulse-subtle">
                         {/* Existing logo code */}
                     </div>
-
-                    {/* ...existing code... */}
                 </div>
             </div>
         </section>
