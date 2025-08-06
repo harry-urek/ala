@@ -1,6 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Services = ({ id }) => {
+    // Enhanced smooth scrolling setup
+    useEffect(() => {
+        // Add custom smooth scrolling behavior for better performance
+        const smoothScrollToElement = (element) => {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest'
+            });
+        };
+
+        // Enhance existing scroll links if any
+        const scrollLinks = document.querySelectorAll('a[href^="#"]');
+        scrollLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    smoothScrollToElement(target);
+                }
+            });
+        });
+
+        // Intersection Observer for scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${Array.from(entry.target.parentNode.children).indexOf(entry.target) * 100}ms`;
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards for staggered animation
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => observer.observe(card));
+
+        return () => {
+            scrollLinks.forEach(link => {
+                link.removeEventListener('click', smoothScrollToElement);
+            });
+            observer.disconnect();
+        };
+    }, []);
+
     const services = [
         {
             name: "Direct Tax",
@@ -110,11 +160,11 @@ const Services = ({ id }) => {
         <section id={id} className="min-h-screen bg-gradient-to-br from-[#f1faee] to-[#d6ccc2] relative overflow-hidden py-20">
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 {/* Section Header */}
-                <div className="mb-20 text-center animate-fade-in-up">
+                <div className="mb-20 flex flex-col  justify-between items-center text-center animate-fade-in-up">
                     <h2 className="text-5xl font-semibold text-[#2c2c2c] mb-6 tracking-tight animate-slide-in-down">
                         Our Services
                     </h2>
-                    <p className="text-xl text-[#666] max-w-5xl mx-auto p-6 font-normal pl-20 text-center animate-fade-in animation-delay-300">
+                    <p className="text-xl text-[#666] max-w-5xl mx-auto p-6 font-normal  text-center animate-fade-in animation-delay-300">
                         Comprehensive legal solutions across multiple practice areas with dedication and expertise
                     </p>
                 </div>
@@ -124,7 +174,7 @@ const Services = ({ id }) => {
                     {services.map((service, index) => (
                         <div 
                             key={index}
-                            className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-white/30 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl animate-fade-in-up group"
+                            className="service-card bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-white/30 hover:bg-white/90 transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl animate-fade-in-up group"
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
                             {/* Category Tag */}

@@ -75,9 +75,55 @@
 }
 
 @layer base {
-  /* Smooth scrolling for the entire page */
+  /* Super smooth scrolling for the entire page */
   html {
     scroll-behavior: smooth;
+    /* Enhanced scrolling properties for webkit browsers */
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-top: 80px; /* Offset for fixed headers */
+    /* Hide scrollbar for webkit browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  /* Hide scrollbar for webkit browsers */
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Super smooth scrolling for all scroll containers */
+  * {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Hide scrollbar for all elements */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  /* Hide scrollbar for webkit browsers on all elements */
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Enhanced momentum scrolling for mobile */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: smooth;
+    /* Hide scrollbar for body */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  /* Hide scrollbar for webkit browsers on body */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Smooth transitions for all interactive elements */
+  *,
+  *::before,
+  *::after {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 

@@ -2,9 +2,9 @@ import React from 'react';
 
 const TeamMemberCard = ({ name, position, qualifications, description, image, reverse = false }) => {
     return (
-        <div className={`flex max-w-8xl mx-auto px-15 py-24 gap-20 items-center max-[760px]:flex-col max-[760px]:px-4 max-[760px]:py-16 max-[760px]:gap-10 ${reverse ? 'flex-row-reverse max-[760px]:flex-col' : ''}`}>
+        <div className={`flex max-w-7xl mx-auto px-10 py-18 gap-15 justify-between items-start max-[760px]:flex-col max-[760px]:px-4 max-[760px]:py-16 max-[760px]:gap-10 ${reverse ? 'flex-row-reverse max-[760px]:flex-col' : ''}`}>
             {/* Content Side */}
-            <div className="flex-1 max-w-2xl py-12 px-12 max-[760px]:max-w-full max-[760px]:py-0 max-[760px]:px-0 max-[760px]:text-center animate-fade-in-left bg-white/40 backdrop-blur-sm rounded-2xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-white/50">
+            <div className="flex-1 max-w-4xl py-12 px-10 max-[760px]:max-w-full max-[760px]:py-0 max-[760px]:px-0 max-[760px]:text-center animate-fade-in-left bg-white/40 backdrop-blur-sm rounded-2xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-white/50">
                 <div className="mb-16 max-[760px]:mb-8">
                     {/* Name with enhanced styling */}
                     <h2 className="text-5xl font-normal pt-5 text-[#2c2c2c] leading-tight mb-3 tracking-tight max-[760px]:text-3xl max-[760px]:mb-2 transition-colors duration-300 p-2 hover:text-[#1a1a1a] relative">
