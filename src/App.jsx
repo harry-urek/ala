@@ -130,13 +130,14 @@ function App() {
 
   return (
     <>
-      <div className="pt-20">
+      <div className="pt-20  pb-0">
         <Navbar />
-        <Hero />
-        <Services />
-        <TeamMember teamMembers={teamMembers} />
-        <Footer />
+        <Hero id="home" />
+        <Services id="services" />
+        <TeamMember id="team" teamMembers={teamMembers} />
+        {/* About section - can be added here if needed */}
       </div>
+        <Footer id="contact" />
     </>
   )
 }

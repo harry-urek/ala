@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Services = () => {
+const Services = ({ id }) => {
     const services = [
         {
             name: "Direct Tax",
@@ -107,14 +107,14 @@ const Services = () => {
     };
 
     return (
-        <section className="min-h-screen bg-gradient-to-br from-[#f1faee] to-[#d6ccc2] relative overflow-hidden py-20">
-            <div className="max-w-7xl mx-auto px-8 relative z-10">
+        <section id={id} className="min-h-screen bg-gradient-to-br from-[#f1faee] to-[#d6ccc2] relative overflow-hidden py-20">
+            <div className="max-w-7xl mx-auto px-4 relative z-10">
                 {/* Section Header */}
                 <div className="mb-20 text-center">
                     <h2 className="text-5xl font-semibold text-[#2c2c2c] mb-6 tracking-tight">
                         Our Services
                     </h2>
-                    <p className="text-xl text-[#666] max-w-3xl mx-auto leading-relaxed font-normal">
+                    <p className="text-xl  text-[#666] max-w-5xl mx-auto p-6 font-normal pl-20 text-center">
                         Comprehensive legal solutions across multiple practice areas with dedication and expertise
                     </p>
                 </div>
