@@ -4,7 +4,7 @@ import TeamMemberCard from './TeamMemberCard';
 const TeamMember = ({ id, teamMembers = [] }) => {
     return (
         <section id={id} className="min-h-screen   bg-gradient-to-br from-[#f5ebe0] via-[#e8dcc6] to-[#d6ccc2] relative overflow-hidden">
-            <div className='flex flex-col max-w-7xl mx-auto px-15 py-20 gap- items-start'>
+            <div className='flex flex-col max-w-7xl mx-auto px-6 py-20 gap- items-start'>
                 {/* Decorative Background Elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute top-20 left-10 w-64 h-64 bg-[#2c2c2c]/5 rounded-full blur-3xl animate-pulse-subtle"></div>

@@ -161,7 +161,7 @@ const Services = ({ id }) => {
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 {/* Section Header */}
                 <div className="mb-20 flex flex-col  justify-between items-center text-center animate-fade-in-up">
-                    <h2 className="text-5xl font-semibold text-[#2c2c2c] mb-6 tracking-tight animate-slide-in-down">
+                    <h2 className="text-5xl font-semibold text-[#2c2c2c] mb-6 tracking-tight animate-slide-in-down dm-serif-text-regular">
                         Our Services
                     </h2>
                     <p className="text-xl text-[#666] max-w-5xl mx-auto p-6 font-normal  text-center animate-fade-in animation-delay-300">
@@ -183,7 +183,7 @@ const Services = ({ id }) => {
                             </div>
 
                             {/* Service Title */}
-                            <h3 className="text-2xl font-semibold text-[#2c2c2c] mb-6 leading-tight tracking-tight transition-colors duration-300 group-hover:text-[#1a1a1a]">
+                            <h3 className="text-2xl font-semibold text-[#2c2c2c] mb-6 leading-tight tracking-tight transition-colors duration-300 group-hover:text-[#1a1a1a] dm-serif-text-regular">
                                 {service.name}
                             </h3>
 

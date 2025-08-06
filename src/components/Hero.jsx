@@ -8,16 +8,16 @@ const Hero = ({ id }) => {
                 <div className="flex-1 max-w-2xl py-10 pl-11 ml-2 max-[760px]:max-w-full max-[760px]:py-0 max-[760px]:pl-0 max-[760px]:ml-0 max-[760px]:text-center animate-fade-in-up">
                     {/* Brand Name */}
                     <div className="flex flex-col mb-15 max-[760px]:mb-8">
-                        <span className="text-5xl font-semibold text-[#2c2c2c] leading-tight tracking-tight max-[760px]:text-3xl animate-slide-in-left">
+                        <span className="text-5xl font-semibold text-[#2c2c2c] leading-tight tracking-tight max-[760px]:text-3xl animate-slide-in-left dm-serif-text-regular">
                             ALKA LAW ASSOCIATES 
                         </span>
                     </div>
 
                     {/* Main Content */}
                     <div className="mb-20 max-[760px]:mb-8">
-                        <h1 className="text-6xl font-normal text-[#2c2c2c] leading-tight mb-6 tracking-tight max-[760px]:text-4xl max-[760px]:mb-4 animate-slide-in-left animation-delay-200">
+                        <h1 className="text-6xl font-normal text-[#2c2c2c] leading-tight mb-6 tracking-tight max-[760px]:text-4xl max-[760px]:mb-4 animate-slide-in-left animation-delay-200 dm-serif-text-regular">
                             Your Justice <br />
-                            <em className="italic font-light">Our Commitment</em>
+                            <em className="italic font-light dm-serif-text-regular-italic">Our Commitment</em>
                         </h1>
 
                         <p className="text-lg text-[#666] leading-relaxed pt-4 mb-5 font-normal text-wrap max-[760px]:text-base max-[760px]:pt-2 max-[760px]:mb-4 animate-fade-in animation-delay-400">

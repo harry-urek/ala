@@ -7,7 +7,7 @@ const TeamMemberCard = ({ name, position, qualifications, description, image, re
             <div className="flex-1 max-w-4xl py-12 px-10 max-[760px]:max-w-full max-[760px]:py-0 max-[760px]:px-0 max-[760px]:text-center animate-fade-in-left bg-white/40 backdrop-blur-sm rounded-2xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-white/50">
                 <div className="mb-16 max-[760px]:mb-8">
                     {/* Name with enhanced styling */}
-                    <h2 className="text-5xl font-normal pt-5 text-[#2c2c2c] leading-tight mb-3 tracking-tight max-[760px]:text-3xl max-[760px]:mb-2 transition-colors duration-300 p-2 hover:text-[#1a1a1a] relative">
+                    <h2 className="text-5xl font-normal pt-5 text-[#2c2c2c] leading-tight mb-3 tracking-tight max-[760px]:text-3xl max-[760px]:mb-2 transition-colors duration-300 p-2 hover:text-[#1a1a1a] relative newsreader-medium">
                         {name}
                         {/* <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#2c2c2c] to-transparent max-[760px]:mx-auto max-[760px]:left-1/2 max-[760px]:-translate-x-1/2"></div> */}
                     </h2>
@@ -48,7 +48,7 @@ const TeamMemberCard = ({ name, position, qualifications, description, image, re
             </div>
 
             {/* Image Side with enhanced styling */}
-            <div className="flex-1 relative h-[700px] flex justify-center items-center max-[760px]:h-auto max-[760px]:flex-none animate-fade-in-right animation-delay-300">
+            <div className="flex-1 relative h-[500px] pl-4 flex justify-center items-center max-[760px]:h-auto max-[760px]:flex-none animate-fade-in-right animation-delay-300">
                 <div className="relative group">
                     {/* Decorative background circle */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#e8f4fd]/30 to-[#c3e9ff]/30 rounded-full scale-110 blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
