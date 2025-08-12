@@ -4,7 +4,7 @@ import TeamMemberCard from './TeamMemberCard';
 const TeamMember = ({ id, teamMembers = [] }) => {
     return (
         <section id={id} className="min-h-screen   bg-gradient-to-br from-[#f5ebe0] via-[#e8dcc6] to-[#d6ccc2] relative overflow-hidden">
-            <div className='flex flex-col max-w-7xl mx-auto px-6 py-20 gap- items-start'>
+            <div className='flex flex-col max-w-7xl mx-auto px-6 py-20 gap-2 items-start'>
                 {/* Decorative Background Elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute top-20 left-10 w-64 h-64 bg-[#2c2c2c]/5 rounded-full blur-3xl animate-pulse-subtle"></div>
@@ -15,7 +15,7 @@ const TeamMember = ({ id, teamMembers = [] }) => {
                 <div className=" mx-auto px-15 pt-24 pb-16 max-[760px]:px-4 max-[760px]:pt-16 max-[760px]:pb-12 animate-fade-in-up relative z-10">
                     <div className="text-center">
                         {/* Subtitle */}
-                        <p className="text-lg text-[#666] font-medium tracking-wide mb-8 pb-8 animate-fade-in animation-delay-200 max-[760px]:text-base">
+                        <p className="text-2xl eb-garamond-600-italic text-[#666] font-medium tracking-wide mb-8 pb-8 animate-fade-in animation-delay-200 max-[760px]:text-base">
                             Excellence in Legal Practice
                         </p>
                 
@@ -41,7 +41,7 @@ const TeamMember = ({ id, teamMembers = [] }) => {
                     </div>
                 </div>
                 {/* Team Members Grid */}
-                <div className="pb-32 max-[760px]:pb-20 relative z-10">
+                <div className="pb-28 max-[760px]:pb-20 relative z-10">
                     <div className="max-w-8xl mx-auto">
                         {teamMembers.map((member, index) => (
                             <div
@@ -63,7 +63,7 @@ const TeamMember = ({ id, teamMembers = [] }) => {
                 
                                 {/* Separator between team members (except last) */}
                                 {index < teamMembers.length - 1 && (
-                                    <div className="flex justify-center my-16 max-[760px]:my-8">
+                                    <div className="flex justify-center my-14 max-[760px]:my-8">
                                         <div className="flex items-center space-x-2">
                                             <div className="w-2 h-2 bg-[#2c2c2c]/20 rounded-full"></div>
                                             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#2c2c2c]/20 to-transparent"></div>

@@ -4,34 +4,34 @@ const TeamMemberCard = ({ name, position, qualifications, description, image, re
     return (
         <div className={`flex max-w-7xl mx-auto px-10 py-18 gap-15 justify-between items-start max-[760px]:flex-col max-[760px]:px-4 max-[760px]:py-16 max-[760px]:gap-10 ${reverse ? 'flex-row-reverse max-[760px]:flex-col' : ''}`}>
             {/* Content Side */}
-            <div className="flex-1 max-w-4xl py-12 px-10 max-[760px]:max-w-full max-[760px]:py-0 max-[760px]:px-0 max-[760px]:text-center animate-fade-in-left bg-white/40 backdrop-blur-sm rounded-2xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-white/50">
+            <div className="flex-1 max-w-4xl py-10 px-11 pb-6  max-[760px]:max-w-full max-[760px]:py-0 max-[760px]:px-0 max-[760px]:text-center animate-fade-in-left bg-white/40 backdrop-blur-sm rounded-2xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-white/50">
                 <div className="mb-16 max-[760px]:mb-8">
                     {/* Name with enhanced styling */}
-                    <h2 className="text-5xl font-normal pt-5 text-[#2c2c2c] leading-tight mb-3 tracking-tight max-[760px]:text-3xl max-[760px]:mb-2 transition-colors duration-300 p-2 hover:text-[#1a1a1a] relative newsreader-medium">
+                    <h2 className="text-5xl font-normal pt-5 text-[#2c2c2c] leading-tight mb-2.5 tracking-tight max-[760px]:text-3xl max-[760px]:mb-2 transition-colors duration-300 p-2 hover:text-[#1a1a1a] relative newsreader-medium">
                         {name}
                         {/* <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#2c2c2c] to-transparent max-[760px]:mx-auto max-[760px]:left-1/2 max-[760px]:-translate-x-1/2"></div> */}
                     </h2>
                     
                     {/* Position with icon */}
-                    <div className="flex items-center max-[760px]:justify-center mb-8 max-[760px]:mb-6">
-                        <div className="w-2 h-2 bg-[#d6ccc2] rounded-full mr-3 max-[760px]:hidden"></div>
-                        <h3 className="text-2xl font-light text-[#666] italic max-[760px]:text-xl transition-colors duration-300 hover:text-[#555']">
+                    <div className="flex items-center pl-2 max-[760px]:justify-center mb-8 max-[760px]:mb-6">
+                        <div className="w-2 h-2  bg-[#d6ccc2] rounded-full mr-2 max-[760px]:hidden"></div>
+                        <h3 className="text-2xl p-1.5  text-[#666] eb-garamond-600-italic max-[760px]:text-xl transition-colors duration-300 hover:text-[#555']">
                             {position}
                         </h3>
                     </div>
 
                     {/* Qualifications Section with enhanced styling */}
                     {qualifications && (
-                        <div className="mb-10 max-[760px]:mb-8 animate-fade-in animation-delay-200 bg-[#f5ebe0]/50 rounded-xl p-6  ">
-                            <h4 className="text-lg font-semibold text-[#2c2c2c] mb-4 max-[760px]:text-base flex items-center">
-                                <span className="w-1.5 h-1.5 bg-[#2c2c2c] rounded-full mr-2"></span>
+                        <div className="mb-8 max-[760px]:mb-6 animate-fade-in animation-delay-200 bg-[#f5ebe0]/50 rounded-xl p-4 pt-2  ">
+                            <h4 className="text-[22px] eb-garamond-600-reg font- text-[#2c2c2c] pb-2 p-1.5 mb-3 max-[760px]:text-base flex items-center">
+                                {/* <span className="w-1.5 h-1.5 bg-[#2c2c2c] rounded-full mr-2"></span> */}
                                 Qualifications
                             </h4>
                             <div className="space-y-2">
                                 {qualifications.map((qual, index) => (
-                                    <p key={index} className="text-base text-[#666] leading-relaxed max-[760px]:text-sm transition-colors duration-300 hover:text-[#555] flex items-start">
+                                    <p key={index} className="text-base text-[#666] newsreader-medium leading-relaxed max-[760px]:text-sm transition-colors duration-300 hover:text-[#555] flex items-start">
                                         <span className="text-[#d6ccc2] mr-2 mt-1 text-sm">•</span>
-                                        <span>{qual}</span>
+                                        <span className='pl-1 pb-0.5'>{qual}</span>
                                     </p>
                                 ))}
                             </div>
@@ -40,7 +40,7 @@ const TeamMemberCard = ({ name, position, qualifications, description, image, re
 
                     {/* Description with enhanced styling */}
                     <div className="relative">
-                        <p className="text-lg text-[#666] leading-relaxed font-normal max-[760px]:text-base animate-fade-in animation-delay-400 transition-colors text-balance text-justify duration-300  hover:text-[#555] pl-5 border-l-2 p-4 border-[#d6ccc2]/50">
+                        <p className="text-xl text-[#666] leading-relaxed eb-garamond-400-reg max-[760px]:text-base animate-fade-in animation-delay-400 transition-colors text-balance text-justify duration-300  hover:text-[#555] pl-5 border-l-2 p-2 border-[#d6ccc2]/50">
                             {description}
                         </p>
                     </div>
